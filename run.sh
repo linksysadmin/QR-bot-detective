@@ -8,12 +8,12 @@ fi
 
 if [ -d ".venv" ]
 then
-    echo "Запуск QR Bot"
+    echo ""
 else
     echo "Установка QR Bot"
     python3 -m venv .venv
     source .venv/bin/activate
     pip install -r requirements.txt
 fi
-
+echo "Запуск QR Bot"
 python3 main.py
