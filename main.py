@@ -42,7 +42,7 @@ def start_bot():
         processed = handle_photo(downloaded_file)
         logger.info('Send message to user')
         if processed:
-            bot.reply_to(message, f"Готово!")
+            bot.reply_to(message, "Готово!")
         else:
             bot.reply_to(message, "QR код не обнаружен")
 
