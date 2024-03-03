@@ -10,14 +10,14 @@ import db
 logger = logging.getLogger(__name__)
 
 bot = telebot.TeleBot(BOT_TOKEN)
-IMAGE = "images/image.jpg"
+FILE_IMAGE = "images/image.jpg"
 
 
 def handle_photo(file):
-    with open(IMAGE, 'wb') as new_file:
+    with open(FILE_IMAGE, 'wb') as new_file:
         new_file.write(file)
     try:
-        image = cv2.imread(IMAGE)
+        image = cv2.imread(FILE_IMAGE)
         decoded_objects = decode(image)
 
         if decoded_objects:
